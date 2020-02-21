@@ -32,3 +32,12 @@ services:
     networks:
       - phpdev
 
+  composer:
+    image: composer:latest
+    container_name: composer
+    volumes:
+      - /code:/var/www/html
+    working_dir: /var/www/html
+    networks:
+      - phpdev
+
